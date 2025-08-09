@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Vegetable
   - Barrier
+  - Blade
   layers:
   - Default
   - TransparentFX

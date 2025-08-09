@@ -16,6 +16,8 @@ public class VegetableData : MonoBehaviour
     [SerializeField]
     [Header("Components")]
     public Rigidbody2D rb;
+    public SpriteRenderer whole;
+    public GameObject sliced;
 
     [SerializeField]
     [Header("Barrier")]
@@ -27,6 +29,7 @@ public class VegetableData : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
         destroyBarrier = GameObject.FindGameObjectWithTag("Barrier");
 
+        sliced.SetActive(false);
         upVelocity = Random.Range(5f, 15f);
         degreeVelocity = Random.Range(-5f, 5f);
         rb.angularVelocity = degreeVelocity;
@@ -38,6 +41,11 @@ public class VegetableData : MonoBehaviour
         if(collision.gameObject == destroyBarrier) 
         {
             Destroy(this.gameObject);
+        }
+        if(collision.gameObject.tag == "Blade")
+        {
+            whole.enabled = false;
+            sliced.SetActive(true);
         }
     }
 }
