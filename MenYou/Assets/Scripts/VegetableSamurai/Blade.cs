@@ -6,9 +6,13 @@ public class Blade : MonoBehaviour
 
     public Vector2 mousePosition;
 
+    public Vector2 direction { get; private set; }
+
     public GameObject bladeTrail;
 
     public float trailSpeed;
+
+    public float sliceForce = 5f;
 
     private void Awake()
     {

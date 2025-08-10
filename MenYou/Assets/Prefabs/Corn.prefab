@@ -178,8 +178,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upVelocity: 0
   degreeVelocity: 0
-  score: 0
-  rb: {fileID: 0}
+  currentVelocity: {x: 0, y: 0}
+  score: 1
+  scoreText: {fileID: 0}
+  wholeRb: {fileID: 0}
+  slicedRb: []
   whole: {fileID: 3558908438982306298}
   sliced: {fileID: 5932270933013756944}
   destroyBarrier: {fileID: 0}
